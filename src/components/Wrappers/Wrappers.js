@@ -79,7 +79,6 @@ const BadgeExtended = ({ classes, theme, children, colorBrightness, ...props }) 
           classes={{
             badge: classnames(classes.badge, styledProps.classes.badge)
           }}
-          {...props}
         >
           {children}
         </BadgeBase>
@@ -106,7 +105,6 @@ const TypographyExtended = ({ theme, children, weight, size, colorBrightness, ..
       fontWeight: getFontWeight(weight),
       fontSize: getFontSize(size, props.variant, theme)
     }}
-    {...props}
   >
     {children}
   </TypographyBase>
@@ -130,7 +128,7 @@ const ButtonExtended = ({ theme, children, ...props }) => {
   return (
     <Styled>
       {({ classes }) => (
-        <ButtonBase classes={{ root: classes.button }} {...props}>
+        <ButtonBase classes={{ root: classes.button }}>
           {children}
         </ButtonBase>
       )}
